@@ -10,7 +10,7 @@
 set -o errexit
 set -o nounset
 
-if [[ -e /certs/server.key && -e /certs/server.key ]]; then
+if [[ -e /certs/server.crt && -e /certs/server.key ]]; then
   echo "server.key and server.cert already exist, skipping..." >&2
 else
   openssl \
