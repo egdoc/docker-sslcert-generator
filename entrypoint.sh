@@ -19,8 +19,8 @@ else
     -nodes \
     -keyout /certs/server.key \
     -x509 \
-    -days "${DAYS}" \
+    -days "${CERT_DAYS}" \
     -out /certs/server.crt \
-    -subj "/C=${COUNTRY}/ST=${STATE}/L=${LOCALITY}/O=${ORGANIZATION_NAME}/CN=${COMMON_NAME}"
+    -subj "/C=${CERT_COUNTRY}/ST=${CERT_STATE}/L=${CERT_LOCALITY}/O=${CERT_ORGANIZATION_NAME}/CN=${CERT_COMMON_NAME}"
   chmod 755 /certs
 fi
